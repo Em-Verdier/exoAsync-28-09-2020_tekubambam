@@ -5,7 +5,7 @@ const src = process.argv[2]
 const dest = process.argv[3]
 
 fsPromises
-    .copyFile(src, dest, COPYFILE_EXCL)
+    .copyFile(`../${src}`, `../${dest}`, COPYFILE_EXCL)
     .then(() => console.log('source.txt was copied to destination.txt'))
     .catch(() => console.log('The file could not be copied'))
 
